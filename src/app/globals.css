@@ -1,26 +1,115 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
+/* ---------------------- LIGHT MODE ---------------------- */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f9fc;
+  --foreground: #0f172a;
+
+  --primary: #4a6cf7;
+  --secondary: #7f54f4;
+  --accent: #00d4ff;
+
+  --card: #ffffff;
+
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+
+  --muted: #e2e8f0;
+  --border-color: #cbd5e1;
+
+  --success: #22c55e;
+  --error: #ef4444;
+  --warning: #fbbf24;
+  --info: #3b82f6;
+
+  /* table colors */
+  --t-header-bg: #eef2ff;
+  --t-row-header-text: #1e3a8a;
+  --t-row-hover: #e0f2fe;
+  --t-row-bg: #ffffff;
+  --t-alt-row-bg: #f8fafc;
+  --t-border: #cbd5e1;
+  --t-text: #0f172a;
+  --t-highlight: #3b82f6;
+
+  /* fonts */
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Roboto Mono', monospace;
 }
 
+/* ---------------------- THEME BINDING ---------------------- */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+
+  --color-textPrimary: var(--text-primary);
+  --color-textSecondary: var(--text-secondary);
+
+  --color-muted: var(--muted);
+  --color-borderColor: var(--border-color);
+
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --color-warning: var(--warning);
+  --color-info: var(--info);
+
+  /* table */
+  --color-tHeaderBg: var(--t-header-bg);
+  --color-tRowHeaderText: var(--t-row-header-text);
+  --color-tRowHover: var(--t-row-hover);
+  --color-tRowBg: var(--t-row-bg);
+  --color-tAltRowBg: var(--t-alt-row-bg);
+  --color-tBorder: var(--t-border);
+  --color-tText: var(--t-text);
+  --color-tHighlight: var(--t-highlight);
+
+  --font-primary: var(--font-primary);
+  --font-secondary: var(--font-secondary);
 }
 
+/* ---------------------- DARK MODE ---------------------- */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a; /* very dark navy */
+    --foreground: #f1f5f9; /* soft white */
+
+    --primary: #4a6cf7;
+    --secondary: #b521f0;
+    --accent: #22d3ee;
+
+    --card: #1e293b; /* dark card */
+
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+
+    --muted: #334155;
+    --border-color: #475569;
+
+    --success: #4ade80;
+    --error: #f87171;
+    --warning: #facc15;
+    --info: #60a5fa;
+
+    /* table dark mode */
+    --t-header-bg: #1e293b;
+    --t-row-header-text: #93c5fd;
+    --t-row-hover: #0f1f33;
+    --t-row-bg: #0f172a;
+    --t-alt-row-bg: #111827;
+    --t-border: #334155;
+    --t-text: #e2e8f0;
+    --t-highlight: #60a5fa;
   }
 }
 
+/* ---------------------- GLOBAL BODY ---------------------- */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary);
+  font-size: 1rem;
 }
